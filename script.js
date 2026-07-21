@@ -420,10 +420,79 @@ function initAmbientLight() {
 }
 
 
+// ── 3D WebGL Three.js Particle Field ──
+function initWebGLParticles() {
+  const canvas = document.getElementById('webgl-canvas');
+  if (!canvas || typeof THREE === 'undefined') return;
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  camera.position.z = 5;
+
+  const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+  // Create 3D particles
+  const count = 1200;
+  const positions = new Float32Array(count * 3);
+  const scales = new Float32Array(count);
+
+  for (let i = 0; i < count * 3; i += 3) {
+    positions[i] = (Math.random() - 0.5) * 12;
+    positions[i + 1] = (Math.random() - 0.5) * 12;
+    positions[i + 2] = (Math.random() - 0.5) * 12;
+    scales[i / 3] = Math.random() * 0.02 + 0.01;
+  }
+
+  const geometry = new THREE.BufferGeometry();
+  geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+  const material = new THREE.PointsMaterial({
+    size: 0.025,
+    color: 0xffffff,
+    transparent: true,
+    opacity: 0.35,
+    blending: THREE.AdditiveBlending
+  });
+
+  const particles = new THREE.Points(geometry, material);
+  scene.add(particles);
+
+  let mouseX = 0;
+  let mouseY = 0;
+
+  window.addEventListener('mousemove', (e) => {
+    mouseX = (e.clientX - window.innerWidth / 2) * 0.0005;
+    mouseY = (e.clientY - window.innerHeight / 2) * 0.0005;
+  }, { passive: true });
+
+  function animate() {
+    requestAnimationFrame(animate);
+    particles.rotation.y += 0.0008;
+    particles.rotation.x += 0.0004;
+
+    camera.position.x += (mouseX - camera.position.x) * 0.05;
+    camera.position.y += (-mouseY - camera.position.y) * 0.05;
+    camera.lookAt(scene.position);
+
+    renderer.render(scene, camera);
+  }
+
+  animate();
+
+  window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  });
+}
+
 // ── Init ──
 document.addEventListener('DOMContentLoaded', () => {
   initLanguage();
   initScrollReveal();
   initProjectsCarousel();
   initAmbientLight();
+  initWebGLParticles();
 });
