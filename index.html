@@ -3,183 +3,542 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ktoto Agency - Premium Web Development</title>
-  <meta name="description" content="Web development agency crafting premium websites. Custom dark-themed, modern, and interactive web experiences.">
+  <title>Ktoto Company — Web Production</title>
+  <meta name="description" content="Freelance web developer crafting premium websites. Custom dark-themed, modern, and interactive web experiences.">
+  <meta property="og:title" content="Ktoto Company — Web Production">
+  <meta property="og:description" content="Freelance web developer crafting premium websites.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/jpeg" href="avatar.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=1.2.1">
 </head>
 <body>
-  
-  <div class="ambient-glow"></div>
-  <div class="ambient-glow glow-2"></div>
 
-  <nav class="navbar">
-    <div class="container nav-content">
-      <div class="logo">Ktoto<span class="accent">.Agency</span></div>
-      <div class="nav-links">
-        <a href="#work">Work</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#pricing">Pricing</a>
+  <!-- ========== BACKGROUND AMBIENT (Performance Optimized) ========== -->
+  <div class="bg-ambient"></div>
+
+  <!-- ========== PRELOADER (Lumora Style) ========== -->
+  <div class="page-loader" id="pageLoader">
+    <div class="page-loader__content">
+      <div class="page-loader__brand">ktoto.company</div>
+      <div class="page-loader__tagline" data-en="Crafting premium digital experiences" data-ru="Создание премиальных веб-решений">Crafting premium digital experiences</div>
+      <div class="page-loader__bar-wrap">
+        <div class="page-loader__bar" id="loaderBar"></div>
       </div>
-      <a href="#contact" class="btn btn-primary">Start a Project</a>
+      <div class="page-loader__counter" id="loaderCounter">00</div>
+    </div>
+  </div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">ktoto.company</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#projects" data-en="Projects" data-ru="Проекты">Projects</a></li>
+        <li><a href="#testimonials" data-en="Reviews" data-ru="Отзывы">Reviews</a></li>
+        <li><a href="#pricing" data-en="Pricing" data-ru="Цены">Pricing</a></li>
+        <li><a href="#about" data-en="About" data-ru="Обо мне">About</a></li>
+        <li><a href="#contact" data-en="Contact" data-ru="Контакт">Contact</a></li>
+        <li>
+          <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="en" id="langEn">EN</button>
+            <button class="lang-btn" data-lang="ru" id="langRu">RU</button>
+          </div>
+        </li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="container hero-content">
-      <div class="badge">Liquid Glass Aesthetics</div>
-      <h1 class="hero-title">We craft digital <br><span class="accent-text">experiences</span> that convert.</h1>
-      <p class="hero-subtitle">A premium web development agency specializing in modern, high-end websites. Designed to impress your audience.</p>
-      <div class="hero-actions">
-        <a href="#work" class="btn btn-primary">View our work</a>
-        <a href="#pricing" class="btn btn-secondary">See pricing</a>
-      </div>
-    </div>
-  </header>
-
-  <section id="work" class="section">
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
     <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Selected Work</h2>
-        <p class="section-subtitle">Premium projects built with precision.</p>
-      </div>
-      
-      <div class="grid projects-grid">
-        <div class="card project-card">
-          <div class="project-img-wrapper">
-            <img src="https://pbs.twimg.com/media/HLMByO3WoAATl1T.jpg" alt="Jace Menu">
-            <div class="glass-overlay">
-              <span class="tag">Landing Page</span>
-              <span class="tag">Dark UI</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <h3>Jace Menu</h3>
-            <p>Dark neon-themed landing page with premium animations and interactive menu design for a client.</p>
-            <a href="https://x.com/Ktoto1300/status/2067998705878171935" target="_blank" class="btn btn-secondary mt-4 w-100" style="padding: 8px;">View on X</a>
-          </div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse"></span>
+          <span data-en="Available for freelance" data-ru="Доступен для фриланса">Available for freelance</span>
         </div>
-        
-        <div class="card project-card">
-          <div class="project-img-wrapper">
-            <img src="img/lumora-studio.webp" alt="Lumora Studio">
-            <div class="glass-overlay">
-              <span class="tag">Creative</span>
-              <span class="tag">Animations</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <h3>Lumora Studio</h3>
-            <p>Elegant creative studio website with portfolio showcase, smooth transitions and premium dark aesthetic.</p>
-            <a href="https://ktoto130.github.io/lumora-studio-/" target="_blank" class="btn btn-secondary mt-4 w-100" style="padding: 8px;">Live Preview</a>
-          </div>
+        <h1>
+          <span data-en="I build websites" data-ru="Я создаю сайты">I build websites</span><br>
+          <span class="gradient-text" data-en="that convert." data-ru="которые работают.">that convert.</span>
+        </h1>
+        <p class="hero-description" data-en="Freelance web developer specializing in modern, dark-themed, premium websites. From landing pages to full web experiences — designed to impress your audience." data-ru="Фриланс веб-разработчик, специализирующийся на современных, тёмных, премиальных сайтах. От лендингов до полных веб-решений — созданных чтобы впечатлять вашу аудиторию.">
+          Freelance web developer specializing in modern, dark-themed, premium websites. From landing pages to full web experiences — designed to impress your audience.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary" data-en="View my work" data-ru="Мои работы">
+            <span>View my work</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 17 5-5-5-5"/><path d="m13 17 5-5-5-5"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-secondary" data-en="Get in touch" data-ru="Связаться">
+            <span>Get in touch</span>
+          </a>
         </div>
-        
-        <div class="card project-card">
-          <div class="project-img-wrapper">
-            <img src="https://pbs.twimg.com/media/HLvtBvCWIAASJvh.jpg" alt="Chen Tutor">
-            <div class="glass-overlay">
-              <span class="tag">Education</span>
-              <span class="tag">Clean UI</span>
-            </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="number">3+</span>
+            <span class="label" data-en="Projects Delivered" data-ru="Проектов сдано">Projects Delivered</span>
           </div>
-          <div class="card-content">
-            <h3>Chen English Tutor</h3>
-            <p>Professional website for an English tutor — helping connect with students worldwide through a clean platform.</p>
-            <a href="https://ktoto130.github.io/Chen-english-tutor/" target="_blank" class="btn btn-secondary mt-4 w-100" style="padding: 8px;">Live Preview</a>
+          <div class="hero-stat">
+            <span class="number">100%</span>
+            <span class="label" data-en="Client Satisfaction" data-ru="Довольных клиентов">Client Satisfaction</span>
+          </div>
+          <div class="hero-stat">
+            <span class="number">2022</span>
+            <span class="label" data-en="Started Building" data-ru="Начал создавать">Started Building</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="reviews" class="section bg-glass">
+  <!-- ========== PROJECTS ========== -->
+  <section id="projects">
     <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Client Feedback</h2>
-        <p class="section-subtitle">Real feedback from real people.</p>
+      <div class="reveal">
+        <span class="section-label" data-en="Portfolio" data-ru="Портфолио">Portfolio</span>
+        <h2 class="section-title" data-en="Selected Projects" data-ru="Избранные проекты">Selected Projects</h2>
+        <p class="section-description" data-en="Each project is crafted with attention to detail, modern aesthetics, and real-world results for clients." data-ru="Каждый проект создан с вниманием к деталям, современной эстетикой и реальными результатами для клиентов.">
+          Each project is crafted with attention to detail, modern aesthetics, and real-world results for clients.
+        </p>
       </div>
-      
-      <div class="grid reviews-grid">
-        <div class="card review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">"Designed and coded a dark neon landing page. Fresh portfolio piece — the result exceeded expectations. Great attention to detail and modern design."</p>
-          <div class="review-author">- Jace (@jace23499)</div>
+
+      <div class="projects-carousel-wrapper reveal">
+        <button class="carousel-arrow prev-arrow" aria-label="Previous Project">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+
+        <div class="projects-carousel-viewport">
+          <div class="projects-carousel-track" id="projectsTrack">
+            <!-- Jace Menu -->
+            <div class="project-slide">
+              <div class="project-card">
+                <div class="project-card-image">
+                  <img src="https://pbs.twimg.com/media/HLMByO3WoAATl1T.jpg" alt="Jace Menu — Dark neon landing page" loading="lazy">
+                  <div class="project-overlay">
+                    <span class="btn-live-preview disabled" style="cursor: not-allowed; opacity: 0.65; background: var(--bg-tertiary); color: var(--text-secondary); box-shadow: none; display: inline-flex; align-items: center; gap: 8px;">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="stroke: var(--text-secondary);"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+                      <span data-en="Offline" data-ru="Офлайн">Offline</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="project-tag">Landing Page</span>
+                    <span class="project-tag">Dark UI</span>
+                    <span class="project-tag">Neon</span>
+                  </div>
+                  <h3 class="project-title">Jace Menu</h3>
+                  <p class="project-description" data-en="Dark neon-themed landing page with premium animations and interactive menu design for a client." data-ru="Тёмный неоновый лендинг с премиальными анимациями и интерактивным дизайном меню для клиента.">
+                    Dark neon-themed landing page with premium animations and interactive menu design for a client.
+                  </p>
+                  <a href="https://x.com/Ktoto1300/status/2067998705878171935" target="_blank" rel="noopener noreferrer" class="project-tweet-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    <span data-en="View post on X" data-ru="Пост в X">View post on X</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Lumora Studio -->
+            <div class="project-slide">
+              <div class="project-card">
+                <div class="project-card-image">
+                  <img src="img/lumora-studio.webp" alt="Lumora Studio — Creative studio website" loading="lazy">
+                  <div class="project-overlay">
+                    <a href="https://ktoto130.github.io/lumora-studio-/" target="_blank" rel="noopener noreferrer" class="btn-live-preview" data-en="Live Preview" data-ru="Смотреть сайт">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                      <span>Live Preview</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="project-tag">Studio</span>
+                    <span class="project-tag">Portfolio</span>
+                    <span class="project-tag">Creative</span>
+                  </div>
+                  <h3 class="project-title">Lumora Studio</h3>
+                  <p class="project-description" data-en="Elegant creative studio website with portfolio showcase, smooth transitions and premium dark aesthetic." data-ru="Элегантный сайт креативной студии с портфолио, плавными переходами и премиальной тёмной эстетикой.">
+                    Elegant creative studio website with portfolio showcase, smooth transitions and premium dark aesthetic.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chen English Tutor -->
+            <div class="project-slide">
+              <div class="project-card">
+                <div class="project-card-image">
+                  <img src="https://pbs.twimg.com/media/HLvtBvCWIAASJvh.jpg" alt="Chen English Tutor — Tutoring platform" loading="lazy">
+                  <div class="project-overlay">
+                    <a href="https://ktoto130.github.io/Chen-english-tutor/" target="_blank" rel="noopener noreferrer" class="btn-live-preview" data-en="Live Preview" data-ru="Смотреть сайт">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                      <span>Live Preview</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="project-tag">Education</span>
+                    <span class="project-tag">Tutoring</span>
+                    <span class="project-tag">Landing</span>
+                  </div>
+                  <h3 class="project-title">Chen English Tutor</h3>
+                  <p class="project-description" data-en="Professional website for an English tutor — helping connect with students worldwide through a clean, modern platform." data-ru="Профессиональный сайт для репетитора английского — помогает находить учеников по всему миру через чистую, современную платформу.">
+                    Professional website for an English tutor — helping connect with students worldwide through a clean, modern platform.
+                  </p>
+                  <a href="https://x.com/Ktoto1300/status/2070509723611242721" target="_blank" rel="noopener noreferrer" class="project-tweet-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    <span data-en="View post on X" data-ru="Пост в X">View post on X</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="card review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">"Built a website prototype to help me connect with more English students. It was a pleasure working together — professional, fast, and exactly what I needed."</p>
-          <div class="review-author">- Chen (English Tutor)</div>
+
+        <button class="carousel-arrow next-arrow" aria-label="Next Project">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+
+      <div class="carousel-indicators">
+        <span class="indicator-dot" data-index="0"></span>
+        <span class="indicator-dot" data-index="1"></span>
+        <span class="indicator-dot" data-index="2"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRICING ========== -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label" data-en="Pricing" data-ru="Цены">Pricing</span>
+        <h2 class="section-title" data-en="Fair pricing, custom solutions" data-ru="Прозрачные цены, индивидуальный подход">Fair pricing, custom solutions</h2>
+        <p class="section-description" data-en="Whether you need a high-converting landing page or a complex web platform, I have a plan for you." data-ru="Нужен ли вам конвертящий лендинг или сложная веб-платформа, у меня есть подходящее решение.">
+          Whether you need a high-converting landing page or a complex web platform, I have a plan for you.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Plan 1 -->
+        <div class="pricing-card reveal">
+          <div class="pricing-header">
+            <h3 class="plan-name" data-en="Landing Page" data-ru="Лендинг">Landing Page</h3>
+            <p class="plan-desc" data-en="Ideal for personal portfolios, product launches, or promo campaigns." data-ru="Идеально для личных портфолио, запуска продуктов или промо-кампаний.">Ideal for personal portfolios, product launches, or promo campaigns.</p>
+            <div class="plan-price">
+              <span class="price-prefix" data-en="From" data-ru="От">From</span>
+              <span class="price" data-en="$50" data-ru="4 000 ₽">$50</span>
+            </div>
+          </div>
+          <div class="pricing-features">
+            <ul>
+              <li>
+                <span class="feature-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span data-en="1 Custom Page" data-ru="1 Индивидуальная страница">1 Custom Page</span>
+              </li>
+              <li>
+                <span class="feature-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span data-en="Premium Dark / Neon UI" data-ru="Премиум темный / неоновый дизайн">Premium Dark / Neon UI</span>
+              </li>
+              <li>
+                <span class="feature-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span data-en="Interactive Animations" data-ru="Интерактивные анимации">Interactive Animations</span>
+              </li>
+              <li>
+                <span class="feature-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span data-en="Fully Responsive Vibe" data-ru="Полная адаптивность под мобильные">Fully Responsive Vibe</span>
+              </li>
+              <li>
+                <span class="feature-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span data-en="Basic SEO & Speed Optimization" data-ru="Базовая SEO-оптимизация и скорость">Basic SEO & Speed Optimization</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pricing-footer">
+            <a href="#contact" class="btn btn-secondary btn-full" data-en="Start Project" data-ru="Начать проект">Start Project</a>
+          </div>
+        </div>
+
+        <!-- Plan 2 (Popular) -->
+        <div class="pricing-card popular reveal">
+          <div class="popular-badge" data-en="POPULAR" data-ru="ПОПУЛЯРНО">POPULAR</div>
+          <div class="pricing-header">
+            <h3 class="plan-name" data-en="Full Website" data-ru="Многостраничный сайт">Full Website</h3>
+            <p class="plan-desc" data-en="Perfect for growing businesses, studios, or educational platforms." data-ru="Отлично для растущих бизнесов, студий или образовательных платформ.">Perfect for growing businesses, studios, or educational platforms.</p>
+            <div class="plan-price">
+              <span class="price-prefix" data-en="From" data-ru="От">From</span>
+              <span class="price" data-en="$100" data-ru="8 000 ₽">$100</span>
+            </div>
+          </div>
+          <div class="pricing-features">
+            <ul>
+              <li>
+                <span class="feature-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span data-en="Up to 5 Pages" data-ru="До 5 страниц">Up to 5 Pages</span>
+              </li>
+              <li>
+                <span class="feature-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span data-en="Premium Creative Design" data-ru="Премиальный креативный дизайн">Premium Creative Design</span>
+              </li>
+              <li>
+                <span class="feature-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span data-en="Advanced Scroll & Hover Effects" data-ru="Сложные эффекты прокрутки и наведения">Advanced Scroll & Hover Effects</span>
+              </li>
+              <li>
+                <span class="feature-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span data-en="Content Management (CMS)" data-ru="Удобная админка (CMS)">Content Management (CMS)</span>
+              </li>
+              <li>
+                <span class="feature-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span data-en="Advanced SEO & Performance" data-ru="Продвинутое SEO и быстродействие">Advanced SEO & Performance</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pricing-footer">
+            <a href="#contact" class="btn btn-primary btn-full" data-en="Get Started" data-ru="Заказать">Get Started</a>
+          </div>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="pricing-card reveal">
+          <div class="pricing-header">
+            <h3 class="plan-name" data-en="Web Application" data-ru="Веб-приложение">Web Application</h3>
+            <p class="plan-desc" data-en="For custom dashboards, interactive apps, and dynamic platforms." data-ru="Для личных кабинетов, интерактивных сервисов и динамических платформ.">For custom dashboards, interactive apps, and dynamic platforms.</p>
+            <div class="plan-price">
+              <span class="price-prefix" data-en="From" data-ru="От">From</span>
+              <span class="price" data-en="$250" data-ru="20 000 ₽">$250</span>
+            </div>
+          </div>
+          <div class="pricing-features">
+            <ul>
+              <li>
+                <span class="feature-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span data-en="Custom Interactive Features" data-ru="Сложный интерактивный функционал">Custom Interactive Features</span>
+              </li>
+              <li>
+                <span class="feature-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span data-en="Database & API Integration" data-ru="Интеграция баз данных и API">Database & API Integration</span>
+              </li>
+              <li>
+                <span class="feature-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span data-en="Premium Custom Frontend" data-ru="Премиальный кастомный фронтенд">Premium Custom Frontend</span>
+              </li>
+              <li>
+                <span class="feature-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span data-en="Security & Auth Systems" data-ru="Авторизация и безопасность данных">Security & Auth Systems</span>
+              </li>
+              <li>
+                <span class="feature-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span data-en="Hosting Setup & 1mo Support" data-ru="Настройка хостинга и месяц поддержки">Hosting Setup & 1mo Support</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pricing-footer">
+            <a href="#contact" class="btn btn-secondary btn-full" data-en="Discuss Scope" data-ru="Обсудить ТЗ">Discuss Scope</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pricing Notes -->
+      <div class="pricing-notes reveal">
+        <div class="pricing-note-col">
+          <h4 data-en="Hosting Options" data-ru="Варианты хостинга">Hosting Options</h4>
+          <ul>
+            <li>
+              <span class="note-bullet"></span>
+              <span>
+                <strong data-en="GitHub Pages:" data-ru="GitHub Pages:">GitHub Pages:</strong>
+                <span data-en=" Free hosting for static portfolios and landing pages." data-ru=" Бесплатный хостинг для статических сайтов и лендингов."> Free hosting for static portfolios and landing pages.</span>
+              </span>
+            </li>
+            <li>
+              <span class="note-bullet"></span>
+              <span>
+                <strong data-en="Own Server:" data-ru="Свой сервер:">Own Server:</strong>
+                <span data-en=" For full dynamic apps & databases (~$5/mo VPS)." data-ru=" Для полноценных приложений и баз данных (VPS/VDS от ~5$/мес или 400 ₽/мес)."> For full dynamic apps & databases (~$5/mo VPS).</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="pricing-note-col">
+          <h4 data-en="Additional Info" data-ru="Дополнительно">Additional Info</h4>
+          <ul>
+            <li>
+              <span class="note-bullet"></span>
+              <span>
+                <strong data-en="Domain Name:" data-ru="Доменное имя:">Domain Name:</strong>
+                <span data-en=" Not included in the development price (purchased separately by client)." data-ru=" Не входит в стоимость разработки (приобретается отдельно клиентом)."> Not included in the development price (purchased separately by client).</span>
+              </span>
+            </li>
+            <li>
+              <span class="note-bullet"></span>
+              <span>
+                <strong data-en="Setup & Support:" data-ru="Настройка и поддержка:">Setup & Support:</strong>
+                <span data-en=" I will help you set up and link everything for free." data-ru=" Я помогу бесплатно настроить и привязать хостинг к вашему домену."> I will help you set up and link everything for free.</span>
+              </span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="pricing" class="section">
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="testimonials" id="testimonials">
     <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Fair Pricing</h2>
-        <p class="section-subtitle">Custom solutions for your business.</p>
+      <div class="reveal">
+        <span class="section-label" data-en="Testimonials" data-ru="Отзывы">Testimonials</span>
+        <h2 class="section-title" data-en="What clients say" data-ru="Что говорят клиенты">What clients say</h2>
+        <p class="section-description" data-en="Real feedback from real people I've worked with." data-ru="Настоящие отзывы от реальных людей, с которыми я работал.">
+          Real feedback from real people I've worked with.
+        </p>
       </div>
-      
-      <div class="grid pricing-grid">
-        <div class="card pricing-card">
-          <h3>Landing Page</h3>
-          <div class="price">$50 <span style="font-size: 1rem; color: var(--color-muted);">/ 4 000 ₽</span></div>
-          <ul class="features">
-            <li>1 Custom Page</li>
-            <li>Premium Dark / Neon UI</li>
-            <li>Interactive Animations</li>
-            <li>Fully Responsive</li>
-          </ul>
-          <a href="#contact" class="btn btn-secondary w-100">Get Started</a>
-        </div>
-        
-        <div class="card pricing-card featured">
-          <div class="popular-badge">Most Popular</div>
-          <h3>Full Website</h3>
-          <div class="price">$100 <span style="font-size: 1rem; color: var(--color-muted);">/ 8 000 ₽</span></div>
-          <ul class="features">
-            <li>Up to 5 Pages</li>
-            <li>Premium Creative Design</li>
-            <li>Advanced Scroll & Hover Effects</li>
-            <li>CMS Integration</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary w-100">Get Started</a>
+
+      <div class="testimonials-grid">
+        <!-- Drew / Jace testimonial -->
+        <div class="testimonial-card reveal">
+          <div class="testimonial-header">
+            <img class="testimonial-avatar" src="https://pbs.twimg.com/profile_images/2060586300000903170/pJan6UES_200x200.jpg" alt="Jace avatar" loading="lazy">
+            <div>
+              <div class="testimonial-author">@jace23499</div>
+              <div class="testimonial-role" data-en="Client — Jace Menu" data-ru="Клиент — Jace Menu">Client — Jace Menu</div>
+            </div>
+          </div>
+          <p class="testimonial-text" data-en="Designed and coded a dark neon landing page. Fresh portfolio piece — the result exceeded expectations. Great attention to detail and modern design." data-ru="Разработал и закодил тёмный неоновый лендинг. Свежий проект — результат превзошёл ожидания. Отличное внимание к деталям и современный дизайн.">
+            Designed and coded a dark neon landing page. Fresh portfolio piece — the result exceeded expectations. Great attention to detail and modern design.
+          </p>
+          <div class="testimonial-stars">★★★★★</div>
+          <a href="https://x.com/Ktoto1300/status/2067998705878171935" target="_blank" rel="noopener noreferrer" class="testimonial-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <span data-en="View on X" data-ru="Посмотреть в X">View on X</span>
+          </a>
         </div>
 
-        <div class="card pricing-card">
-          <h3>Web Application</h3>
-          <div class="price">$250 <span style="font-size: 1rem; color: var(--color-muted);">/ 20 000 ₽</span></div>
-          <ul class="features">
-            <li>Custom Interactive Features</li>
-            <li>Database & API Integration</li>
-            <li>Security & Auth Systems</li>
-            <li>Hosting Setup</li>
-          </ul>
-          <a href="#contact" class="btn btn-secondary w-100">Get Started</a>
+        <!-- Chen testimonial -->
+        <div class="testimonial-card reveal">
+          <div class="testimonial-header">
+            <img class="testimonial-avatar" src="https://pbs.twimg.com/profile_images/2056729969196503040/KV5VHv1x_200x200.jpg" alt="Chen avatar" loading="lazy">
+            <div>
+              <div class="testimonial-author">Chen</div>
+              <div class="testimonial-role" data-en="Client — English Tutor" data-ru="Клиент — Репетитор английского">Client — English Tutor</div>
+            </div>
+          </div>
+          <p class="testimonial-text" data-en="Built a website prototype to help me connect with more English students. It was a pleasure working together — professional, fast, and exactly what I needed." data-ru="Создал прототип сайта, чтобы помочь мне найти больше учеников. Было приятно работать вместе — профессионально, быстро и именно то, что мне было нужно.">
+            Built a website prototype to help me connect with more English students. It was a pleasure working together — professional, fast, and exactly what I needed.
+          </p>
+          <div class="testimonial-stars">★★★★★</div>
+          <a href="https://x.com/Ktoto1300/status/2070509723611242721" target="_blank" rel="noopener noreferrer" class="testimonial-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <span data-en="View on X" data-ru="Посмотреть в X">View on X</span>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <footer id="contact" class="footer">
+  <!-- ========== ABOUT ========== -->
+  <section id="about">
     <div class="container">
-      <h2>Ready to start?</h2>
-      <p>Let's build something extraordinary together.</p>
-      <div class="contact-links mt-4" style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-        <a href="https://t.me/ktoto13000" class="btn btn-primary" target="_blank">Telegram</a>
-        <a href="https://x.com/Ktoto1300" class="btn btn-secondary" target="_blank">Twitter (X)</a>
-        <a href="https://instagram.com/webdeveloper1300" class="btn btn-secondary" target="_blank">Instagram</a>
-        <a href="https://github.com/ktoto130" class="btn btn-secondary" target="_blank">GitHub</a>
+      <div class="reveal">
+        <span class="section-label" data-en="About" data-ru="Обо мне">About</span>
+        <h2 class="section-title" data-en="Who is ktoto?" data-ru="Кто такой ktoto?">Who is ktoto?</h2>
       </div>
-      <div class="copyright mt-4">
-        © 2026 Ktoto Agency. All rights reserved.
+
+      <div class="about-content reveal">
+        <div class="about-text">
+          <p data-en="I'm a freelance web developer who builds premium websites on commission. I specialize in dark-themed, modern, interactive web experiences that make businesses stand out." data-ru="Я фрилансер веб-разработчик, создающий премиальные сайты на заказ. Специализируюсь на тёмных, современных, интерактивных веб-проектах, которые выделяют бизнес.">
+            I'm a freelance web developer who builds premium websites on commission. I specialize in dark-themed, modern, interactive web experiences that make businesses stand out.
+          </p>
+          <p data-en="Every project I take on gets the same treatment — pixel-perfect design, smooth animations, responsive layouts, and a focus on real conversion. No templates, no shortcuts." data-ru="Каждый проект получает одинаковое внимание — пиксель-перфектный дизайн, плавные анимации, адаптивную вёрстку и фокус на реальную конверсию. Без шаблонов, без компромиссов.">
+            Every project I take on gets the same treatment — pixel-perfect design, smooth animations, responsive layouts, and a focus on real conversion. No templates, no shortcuts.
+          </p>
+          <div class="skills-list">
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Responsive Design</span>
+            <span class="skill-tag">Dark UI</span>
+            <span class="skill-tag">Animations</span>
+            <span class="skill-tag">Landing Pages</span>
+            <span class="skill-tag">UI/UX</span>
+          </div>
+        </div>
+
+        <div class="about-cards">
+          <div class="about-card">
+            <div class="about-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3 data-en="Fast Delivery" data-ru="Быстрая доставка">Fast Delivery</h3>
+            <p data-en="Most projects completed within 3-7 days. Clean code, no revisions headache." data-ru="Большинство проектов готовы за 3-7 дней. Чистый код, без головной боли с правками.">Most projects completed within 3-7 days. Clean code, no revisions headache.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/><path d="M12 8A4 4 0 1 0 12 16A4 4 0 1 0 12 8Z"/></svg>
+            </div>
+            <h3 data-en="Premium Design" data-ru="Премиум дизайн">Premium Design</h3>
+            <p data-en="Every website looks like a million bucks. Dark themes, neon accents, glassmorphism — you name it." data-ru="Каждый сайт выглядит на миллион. Тёмные темы, неоновые акценты, глассморфизм — что угодно.">Every website looks like a million bucks. Dark themes, neon accents, glassmorphism — you name it.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            </div>
+            <h3 data-en="Fully Responsive" data-ru="Полная адаптивность">Fully Responsive</h3>
+            <p data-en="Looks perfect on any device — desktop, tablet, or phone. No compromises." data-ru="Идеально выглядит на любом устройстве — компьютер, планшет или телефон. Без компромиссов.">Looks perfect on any device — desktop, tablet, or phone. No compromises.</p>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label" data-en="Contact" data-ru="Контакт">Contact</span>
+        <h2 class="section-title" data-en="Let's work together" data-ru="Давайте работать вместе">Let's work together</h2>
+        <p class="section-description" data-en="Got a project in mind? Reach out and let's make something amazing." data-ru="Есть проект на уме? Напишите мне, и давайте создадим что-то потрясающее.">
+          Got a project in mind? Reach out and let's make something amazing.
+        </p>
+      </div>
+
+      <div class="contact-links reveal">
+        <a href="https://x.com/Ktoto1300" target="_blank" rel="noopener noreferrer" class="contact-link x-twitter">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <span>X (Twitter)</span>
+        </a>
+        <a href="https://github.com/ktoto130" target="_blank" rel="noopener noreferrer" class="contact-link github">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          <span>GitHub</span>
+        </a>
+        <a href="https://t.me/ktoto13000" target="_blank" rel="noopener noreferrer" class="contact-link telegram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          <span>Telegram</span>
+        </a>
+        <a href="https://instagram.com/webdeveloper1300" target="_blank" rel="noopener noreferrer" class="contact-link instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          <span>Instagram</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p><span data-en="© 2026 ktoto. Built with" data-ru="© 2026 ktoto. Сделано с">© 2026 ktoto. Built with</span> <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--accent)" stroke="var(--accent)" stroke-width="2" style="display:inline-block;vertical-align:middle;margin:0 2px;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></p>
     </div>
   </footer>
 
+  <script src="script.js?v=1.2.1"></script>
 </body>
 </html>
